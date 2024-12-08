@@ -60,6 +60,7 @@ export async function createInvoice(prevState: State,formData: FormData) {
   } catch (error) {
     return {
       message: "Database Error: Failed to Create Invoice.",
+      error: error,
     };
   }
 
@@ -93,6 +94,7 @@ const { customerId, amount, status } = validatedFields.data;
   } catch (error) {
     return {
       message: "Database Error: Failed to Update Invoice.",
+      error: error,
     };
   }
 
